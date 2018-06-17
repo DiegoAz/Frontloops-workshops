@@ -1,0 +1,12 @@
+mixin device-card(src, device, description)
+  div.device-card
+    img.image(src=src)
+    h1.device=device
+    p.description=description
+    block
+    
+mixin price-label(value)
+  div.price-label
+    sup.currency $
+    span.value=value
+    span.period / month

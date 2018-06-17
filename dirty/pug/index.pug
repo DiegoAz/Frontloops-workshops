@@ -1,0 +1,18 @@
+extends layout.pug
+include mixins.pug
+
+block content
+  section.loop
+    section.prices-card
+      +device-card('img/device.svg', 
+                  'mobile', 
+                  'Get notifications about new releases in our mobile app')
+        +price-label('10') 
+      +device-card('img/laptop.svg', 
+                   'desktop', 
+                   'Enjoy new episodes on your lapton in browser with our web service, which supports all the platforms.')
+        +price-label('15')
+      +device-card('img/monitor.svg', 
+                  'tv', 
+                  'Watch your favorite series at home on large screen with our tv application.')
+        +price-label('20')
