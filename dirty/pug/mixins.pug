@@ -10,3 +10,11 @@ mixin price-label(value)
     sup.currency $
     span.value=value
     span.period / month
+
+mixin payment-option(option, src, checked)
+  div.payment-option
+    input.radio(type="radio" value=option name="card" id=option checked=checked)      
+    label.label(for=option)=option
+      img.image(src=src)
+      img.check(src="img/check.svg")
+        

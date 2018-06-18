@@ -27,7 +27,7 @@
     img: 'final/img'
   }
 
-  // browser-sync task for starting the server.
+  // browser-sync task for starting the serve
 
   gulp.task('browser-sync', function() {
     browserSync.init({

@@ -16,3 +16,16 @@ block content
                   'tv', 
                   'Watch your favorite series at home on large screen with our tv application.')
         +price-label('20')
+  section.loop
+    section.payment-card
+      div.indicators
+        div.circle.active
+        div.circle
+        div.circle
+      h3.title payment method
+      form.payment-form(action="")
+        +payment-option('visa', "img/visa.svg", 'checked')
+        +payment-option('mastercard', "img/mastercard.svg")
+        +payment-option('maestro',"img/maestro.svg")           
+        button.button next step
+          img.arrow(src="img/arrow.svg")
