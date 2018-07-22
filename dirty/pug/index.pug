@@ -4,17 +4,11 @@ include mixins.pug
 block content
   section.loop
     section.prices-card
-      +device-card('img/device.svg', 
-                  'mobile', 
-                  'Get notifications about new releases in our mobile app')
+      +device-card('img/device.svg','mobile','Get notifications about new releases in our mobile app')
         +price-label('10') 
-      +device-card('img/laptop.svg', 
-                   'desktop', 
-                   'Enjoy new episodes on your lapton in browser with our web service, which supports all the platforms.')
+      +device-card('img/laptop.svg','desktop','Enjoy new episodes on your lapton in browser with our web service, which supports all the platforms.')
         +price-label('15')
-      +device-card('img/monitor.svg', 
-                  'tv', 
-                  'Watch your favorite series at home on large screen with our tv application.')
+      +device-card('img/monitor.svg','tv','Watch your favorite series at home on large screen with our tv application.')
         +price-label('20')
   section.loop
     section.payment-card
@@ -26,6 +20,10 @@ block content
       form.payment-form(action="")
         +payment-option('visa', "img/visa.svg", 'checked')
         +payment-option('mastercard', "img/mastercard.svg")
-        +payment-option('maestro',"img/maestro.svg")           
-        button.button next step
-          img.arrow(src="img/arrow.svg")
+        +payment-option('maestro',"img/maestro.svg")          
+        +button('next step')
+          img.arrow(src="img/arrow.svg")  
+  section.loop
+    section.order-card    
+      +order-table('SimpleWheels', '#2357654')
+     

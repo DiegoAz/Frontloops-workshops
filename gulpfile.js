@@ -35,7 +35,7 @@
         baseDir: "final"
       },
       notify: false,
-      browser: ["opera"]
+      // browser: ["chrome"]
     });
   });
 

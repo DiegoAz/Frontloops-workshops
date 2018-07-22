@@ -17,4 +17,28 @@ mixin payment-option(option, src, checked)
     label.label(for=option)=option
       img.image(src=src)
       img.check(src="img/check.svg")
-        
+
+mixin button(text)
+  button.button=text
+    block
+
+mixin order-table(userName, order)
+  table.order-table
+    thead.header
+      tr
+        td.userName=userName
+        td.account          
+          a.user(href="")
+            img.account(src="img/account.svg")
+    tbody.body
+      tr
+        td.caption(colspan="2") Thanks for your order #{order}, your package will be on it's way shortly.
+    - var products = {"Chapelli Vintage Single Speed":"$317","Castelli Arenberg Gel Gloves":"$39"}
+    each price,description in products 
+      tr.item
+        td.description=description
+        td.price=price      
+    tfoot.footer
+      tr
+        td TOTAL
+        td.price $356
